@@ -1,0 +1,33 @@
+{
+  "name": "pjjam",
+  "version": "1.0.0",
+  "description": "A webapp to display game win data",
+  "main": "pjjam.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamjarman/pjjam.git"
+  },
+  "keywords": [
+    "pjjam",
+    "board",
+    "games",
+    "D3",
+    "data",
+    "visualization"
+  ],
+  "author": "Jamie Gilkeson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jamjarman/pjjam/issues"
+  },
+  "homepage": "https://github.com/Jamjarman/pjjam#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "d3": "^3.5.16",
+    "express": "^4.13.4",
+    "express3-handlebars": "^0.5.2"
+  }
+}
