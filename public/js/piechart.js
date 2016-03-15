@@ -17,6 +17,7 @@ function pieChart(d3, file, divid, width, height, clickable){
 	    .attr('transform', 'translate(' + (width / 2) + 
 		  ',' + (height / 2) + ')');
 
+            
     var arc = d3.svg.arc()
 	    .innerRadius(radius - donutWidth)
 	    .outerRadius(radius);
@@ -24,14 +25,26 @@ function pieChart(d3, file, divid, width, height, clickable){
     var pie = d3.layout.pie()
 		 .value(function(d) { return d.count; })
 	    .sort(null);
+
+    
     var tooltip=d3.select(divid)
 	    .append('div')
-		   .attr('class', 'tooltip');
+	    .attr('class', 'tooltip');
+    
     tooltip.append('div')
 	.attr('class', 'player');
     tooltip.append('div')
 	.attr('class', 'count');
     tooltip.append('div')
+	.attr('class', 'percent');
+
+    var readout=d3.select(divid)
+	    .append('div');
+    readout.append('div')
+	.attr('class', 'player');
+    readout.append('div')
+	.attr('class', 'count');
+    readout.append('div')
 	.attr('class', 'percent');
     
     
@@ -49,20 +62,23 @@ function pieChart(d3, file, divid, width, height, clickable){
 		.attr('fill', function(d, i) { 
 		    return color(d.data.player);
 		});
-	
+
+		
 	path.on('mouseover', function(d){
 	    var total=d3.sum(dataset.map(function(d){
 		return d.count;
 	    }));
 	    var percent=Math.round(1000*d.data.count/total)/10;
 	    tooltip.select('.player').html(d.data.player);
-	     tooltip.select('.count').html(d.data.count);
+	    tooltip.select('.count').html(d.data.count);
 	    tooltip.select('.percent').html(percent+'%');
 	    tooltip.style('display', 'block');
+	    readout.html('<center><strong>Name: </strong>'+d.data.player+' <strong>Count: </strong>'+d.data.count+' <strong>Percent: </strong>'+percent+'%</center>');
 	});
 	
 	path.on('mouseout', function(d){
 	    tooltip.style('display', 'none');
+	    readout.html('');
 	});
 
 	if(clickable){

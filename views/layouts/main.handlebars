@@ -7,6 +7,52 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap-theme.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <script src="js/d3.min.js"></script>
+    <style>
+     .tooltip {                                                        
+	 background: #eee;                                             
+	 box-shadow: 0 0 5px #999999;                                  
+	 color: #333;                                                  
+	 display: none;                                                
+	 font-size: 12px;                                              
+	 left: 130px;                                                  
+	 padding: 10px;                                                
+	 position: absolute;                                           
+	 text-align: center;                                           
+	 top: 95px;                                                    
+	 width: 80px;                                                  
+	 z-index: 10;                                                  
+     }       
+     #chartplay {
+	 height: 360px;
+	 margin: 0 auto;                            
+	 position: relative;
+	 width: 360px;
+     }
+     #chartwin {
+	 height: 360px;
+	 margin: 0 auto;                           
+	 position: relative;
+	 width: 360px;
+     }
+     #chartgame {
+	 height: 720px;
+	 margin: 0 auto;                           
+	 position: relative;
+	 width: 720px;
+     }
+     #chartgamegen {
+	 height: 720px;
+	 margin: 0 auto;                           
+	 position: relative;
+	 width: 720px;
+     }
+     .legend {
+	 font-size: 12px;
+     }
+     rect {
+	 stroke-width: 2;
+     }
+    </style>
   </head>
   <body>
     <div class="navbar navbar-default navbar-inverse">

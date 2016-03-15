@@ -22,7 +22,7 @@ app.use(function(req, res, next){
 //set view engine to handlebars
 app.set('view engine', 'handlebars');
 //set port to 3002
-app.set('port', process.env.PORT || 3002);
+app.set('port', process.env.PORT || 3069);
 
 
 app.get('/', function(req, res){
