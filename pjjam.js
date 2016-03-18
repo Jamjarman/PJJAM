@@ -30,6 +30,66 @@ app.get('/', function(req, res){
     res.render('home');
 });
 
+app.get('/data/plays.csv', function(req, res){
+    res.send(new Buffer('public/data/plays.csv'));
+});
+
+app.get('/data/wins.csv', function(req, res){
+    res.send(new Buffer('public/data/wins.csv'));
+});
+
+app.get('/data/Spades.csv', function(req, res){
+    res.send(new Buffer('public/data/Spades.csv'));
+});
+
+app.get('/data/\'Ticket to Ride\'.csv', function(req, res){
+    res.send(new Buffer('public/data/\'Ticket to Ride\'.csv'));
+});
+
+app.get('/data/\'Settlers of Catan\'.csv', function(req, res){
+    res.send(new Buffer('public/data/\'Settlers of Catan\'.csv'));
+});
+
+app.get('/data/\'Nintey Nine\'.csv', function(req, res){
+    res.send(new Buffer('public/data/Nintey Nine.csv'));
+});
+
+app.get('/data/Mr. Game.csv', function(req, res){
+    res.send(new Buffer('public/data/Mr. Game.csv'));
+});
+
+app.get('/data/Munchkin.csv', function(req, res){
+    res.send(new Buffer('public/data/Munchkin.csv'));
+});
+
+app.get('/data/Hearts.csv', function(req, res){
+    res.send(new Buffer('public/data/Hearts.csv'));
+});
+
+app.get('/data/Five Hundred.csv', function(req, res){
+    res.send(new Buffer('public/data/Five Hundred.csv'));
+});
+
+app.get('/data/Dominion.csv', function(req, res){
+    res.send(new Buffer('public/data/Dominion.csv'));
+});
+
+app.get('/data/Firefly.csv', function(req, res){
+    res.send(new Buffer('public/data/Firefly.csv'));
+});
+
+app.get('/data/Cosmics.csv', function(req, res){
+    res.send(new Buffer('public/data/Cosmics.csv'));
+});
+
+app.get('/data/Blukes.csv', function(req, res){
+    res.send(new Buffer('public/data/Blukes.csv'));
+});
+
+app.get('/data/allgames.csv', function(req, res){
+    res.send(new Buffer('public/data/allgames.csv'));
+});
+
 app.use(function(req, res){
     res.status(404);
     res.render('404', {layout: false});
