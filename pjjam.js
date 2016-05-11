@@ -1,6 +1,7 @@
 //require express and set up express/handlebars for main workload
 var express = require('express');
 var app=express();
+var path=require('path');
 //set deafult layout to main and add support for sections
 var handlebars = require('express3-handlebars').create({ defaultLayout:'main' , helpers: {
     section: function(name, options){
@@ -21,6 +22,7 @@ app.use(function(req, res, next){
 });
 //set view engine to handlebars
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 //set port to 3002
 app.set('port', process.env.PORT || 3069);
 
